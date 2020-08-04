@@ -1,0 +1,100 @@
+@import "src/custom.scss";
+
+.about {
+  width: 100%;
+  .title {
+    margin: 0 auto;
+    align-content: center;
+    white-space: nowrap;
+    h1 {
+      line-height: 50px;
+    }
+  }
+  .about__info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 68px;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+
+    .info__title {
+      margin-bottom: 24px;
+    }
+      p {
+        margin-bottom: 36px;
+        text-align: justify;
+      }
+
+
+  }
+}
+
+@include mobile {
+  .title {
+    width: 325px;
+    height: 25px;
+  }
+  #img {
+    width: 290px;
+    height: 250px;
+  }
+  .info__text{
+    width: 330px;
+    height: 260px;
+  }
+
+}
+
+@include tablet {
+  .title {
+    width: 360px;
+    height: 41px;
+  }
+  #img {
+    width: 250px;
+    height: 210px;
+  }
+  .info{
+    padding-left: 30px;
+  }
+  .info__text {
+    width: 430px;
+    height: 205px;
+
+  }
+}
+
+@include desktop {
+
+  .title {
+    width: 445px;
+    height: 50px;
+  }
+  #img {
+    width: 340px;
+    height: 285px;
+  }
+  .info{
+    padding-left: 50px;
+  }
+  .info__text {
+    width: 550px;
+    height: 185px;
+  }
+}
+
+.a-about {
+  background-color: #fff;
+  color: #ef5b4c;
+  width: 94px;
+  height: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.a-about:hover {
+  color: #d24335;
+}

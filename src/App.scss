@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import "custom";
+*,*:before,*:after{
+  border:0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body, #root{
+  height: 100%;
+  font-family: 'Open Sans',sans-serif;
+}
+
+$primary-color: #ef5b4c;
+$secondary-color: #007bff;
+$background-color:#fff;
+$background-color2:#f9f9f3;
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-height: 100%;
+  .app-header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    justify-self: center;
+    background-color: #fff;
+    width: 100%;
+  }
+  .app-header:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  .app-content{
+    flex:1 0 auto;
+    height: 100%;
+  }
+  .app-footer{
+    flex: 0 0 auto;
+    min-height: 20px;
+    color: gray;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+}
+
+input[type=text],input[type=email],input[type=tel],input[type=file] {
+  font-family:'PT Sans',sans-serif;
+  box-sizing: border-box;
+  width: 330px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 13px;
+  line-height: 28px;
+  color: #404040;
+  display: inline-block;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  @include tablet{
+    width: 468px;
+  }
+}
+input[type=radio]{
+  font-family: "PT Sans",sans-serif;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+input:focus {
+  outline: #80bdff;
+  border: 3px solid rgba(128, 189, 255, 0.2);
+}
+label{
+  display: block;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+a:hover{
+  color: #ef5b4c;
+
+}
+
+
+

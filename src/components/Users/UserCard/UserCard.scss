@@ -1,0 +1,52 @@
+@import "src/custom.scss";
+.card {
+  flex: 0 0 100%;
+  @include tablet{
+    flex: 0 0 33%;
+  }
+  box-sizing: border-box;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: start;
+  text-overflow: ellipsis;
+  .name{
+    font-size: 24px;
+  }
+  .overflow {
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    padding: 5px; /* Поля */
+    text-overflow: ellipsis; /* Многоточие */
+  }
+
+  .overflow:hover {
+    background: #f0f0f0; /* Цвет фона */
+    white-space: normal; /* Обычный перенос текста */
+    cursor: pointer;
+  }
+  .tooltip span {
+    display: none;
+    padding: 2px 3px;
+    margin-left: 8px;
+    width: 130px;
+  }
+
+  .tooltip:hover span {
+    display: inline;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #6c6c6c;
+  }
+  .photo {
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 35px;
+  }
+
+}
+
+

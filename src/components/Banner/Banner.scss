@@ -1,0 +1,113 @@
+@import "./../../custom.scss";
+
+
+.banner {
+  background-image: url("./../../assets/banner-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  width: 100%;
+  .title{
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-left: 30px;
+  }
+}
+
+@include mobile {
+  .banner {
+    background-image: url("./../../assets/banner_mobile.jpg");
+    background-size: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      padding-top: 67px;
+      width: 300px;
+      height: 90px;
+      h1 {
+        text-align: center;
+      }}
+    .simple__text {
+      width: 330px;
+      height: 65px;
+      padding-top: 80px;
+      p {
+        text-align: center;
+      }
+    }
+    .primary-btn {
+      margin-top: 160px;
+    }
+  }
+}
+
+@include tablet {
+  .banner {
+    height: 500px;
+
+    .title {
+      padding-top: 67px;
+      width: 403px;
+      height: 118px;
+
+      h1 {
+        text-align: justify;
+      }}
+      .simple__text {
+        width: 450px;
+        height: 135px;
+        padding-left: 30px;
+        padding-top: 124px;
+
+        p {
+          text-align: left;
+        }
+      }
+    .primary-btn {
+      margin-top: 160px;
+    }
+
+  }
+}
+@include desktop {
+  .banner {
+    height: 600px;
+    margin-bottom: 160px;
+
+    .title {
+      padding-top: 107px;
+      width: 501px;
+      height: 146px;
+      padding-left: 30px;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      h1 {
+        text-align: justify;
+      }
+    }
+
+    .simple__text {
+      padding-top: 150px;
+      width: 551px;
+      height: 110px;
+      padding-left: 30px;
+
+      p {
+        text-align: left;
+      }
+    }
+
+
+    .primary-btn {
+      margin-top: 150px;
+    }
+  }
+}
+
+
+
+

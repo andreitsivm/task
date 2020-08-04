@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useRoutes} from "./hook/routes.hook";
+import {BrowserRouter} from "react-router-dom";
+import {Context} from "./context/Context";
+import {useModal} from "./hook/useModal";
+import Modal from "./components/Modal/Modal";
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+const App = () => {
+
+    const {toggle, isOpen,message,showMessage,clearMessage} = useModal()
+    const routes = useRoutes()
+    return (
+        <Context.Provider value={{toggle,showMessage}}>
+            <BrowserRouter>
+                <div className="App">
+                    <Modal isOpen={isOpen} toggle={toggle} message={message} clear={clearMessage} />
+                    {routes}
+                </div>
+            </BrowserRouter>
+        </Context.Provider>
+    );
 }
 
 export default App;

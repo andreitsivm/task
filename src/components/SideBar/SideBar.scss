@@ -1,0 +1,29 @@
+@import "src/custom.scss";
+.side-menu{
+  position: absolute;
+  height: 600px;
+  overflow: auto;
+  @include mobile{
+  top: 40px;}
+  @include tablet{
+    top:60px
+  }
+  left: 0;
+  width: 290px;
+  z-index: 50;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  .menu_block{
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  li{
+    list-style: none;
+    display: inline;
+    padding:0 30px
+  }
+  a{
+    padding: 25px;
+  }
+}

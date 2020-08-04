@@ -1,0 +1,22 @@
+.users__block{
+  background-color: #f9f9f3;
+  margin: 0 auto;
+  .title{
+    padding-top: 150px;
+    text-align: center;
+    margin-bottom: 70px;
+    h1{
+    margin-bottom: 25px;}
+
+  }
+  .users {
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display: block;
+    margin: 0 auto;
+
+  }
+  }
